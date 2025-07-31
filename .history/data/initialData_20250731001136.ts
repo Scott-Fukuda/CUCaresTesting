@@ -21,7 +21,7 @@ export const initialOpportunities: Opportunity[] = [
     title: 'Community Meal Service',
     description: 'Help prepare and serve free meals to community members in a respectful and welcoming environment.',
     date: '2025-09-01', time: '15:00', duration: 3, totalSlots: 8,
-    imageUrl: '/CUCaresTesting/images/download-1.jpg',
+    imageUrl: '/images/download-1.jpg',
     points: 180, cause: 'Food Security and Hunger Relief'
   },
   {
@@ -39,7 +39,7 @@ export const initialOpportunities: Opportunity[] = [
     title: 'Garden Weeding & Maintenance',
     description: 'Get your hands dirty and help maintain the beautiful and playful gardens that serve as a resource for local children.',
     date: '2025-09-03', time: '09:00', duration: 3, totalSlots: 15,
-    imageUrl: '/CUCaresTesting/images/images.jpg',
+    imageUrl: '/images/images.jpg',
     points: 180, cause: 'Education'
   },
   {
@@ -48,7 +48,7 @@ export const initialOpportunities: Opportunity[] = [
     title: 'Animal Care Assistant',
     description: 'Assist the staff with daily feeding, cleaning, and care for the resident animals at the nature center.',
     date: '2025-09-04', time: '13:00', duration: 4, totalSlots: 6,
-    imageUrl: '/CUCaresTesting/images/images-1.jpg',
+    imageUrl: '/images/images-1.jpg',
     points: 240, cause: 'Other'
   },
   {
@@ -57,7 +57,7 @@ export const initialOpportunities: Opportunity[] = [
     title: 'Dog Walking & Socialization',
     description: 'Give shelter dogs some much-needed exercise and affection by taking them for walks on the SPCA trails.',
     date: '2025-09-05', time: '10:00', duration: 2, totalSlots: 12,
-    imageUrl: '/CUCaresTesting/images/download-3.jpg',
+    imageUrl: '/images/download-3.jpg',
     points: 120, cause: 'Other'
   },
   {
@@ -66,7 +66,7 @@ export const initialOpportunities: Opportunity[] = [
     title: 'Exhibit Floor Volunteer',
     description: 'Engage with families and children on the museum floor, helping them interact with exhibits and facilitating scientific discovery.',
     date: '2025-09-06', time: '12:00', duration: 3.5, totalSlots: 8,
-    imageUrl: '/CUCaresTesting/images/download-1.jpg',
+    imageUrl: '/images/download-1.jpg',
     points: 210, cause: 'Education'
   },
   {
@@ -75,7 +75,7 @@ export const initialOpportunities: Opportunity[] = [
     title: 'Event Ushering',
     description: 'Help with ticket scanning, guiding patrons to their seats, and ensuring a great experience for a concert night.',
     date: '2025-09-06', time: '18:00', duration: 4, totalSlots: 10,
-    imageUrl: '/CUCaresTesting/images/download-2.jpg',
+    imageUrl: '/images/download-2.jpg',
     points: 240, cause: 'Other'
   },
   {
@@ -84,7 +84,7 @@ export const initialOpportunities: Opportunity[] = [
     title: 'Trail Maintenance Day',
     description: 'Work with a team to clear brush, repair pathways, and help maintain the beautiful natural trails around Ithaca.',
     date: '2025-09-07', time: '09:00', duration: 4, totalSlots: 20,
-    imageUrl: '/CUCaresTesting/images/download.jpg',
+    imageUrl: '/images/download.jpg',
     points: 240, cause: 'Environment & Sustainability'
   },
 ];
