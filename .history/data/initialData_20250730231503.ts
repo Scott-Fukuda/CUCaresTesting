@@ -2,7 +2,7 @@
 import { User, Opportunity, SignUp, StudentGroup, FriendRequest, Badge, StudentGroupCategory } from '../types';
 
 export const initialStudents: User[] = [
-  { id: 1, firstName: 'Alice', lastName: 'Johnson', email: 'aj123@cornell.edu', password: 'password123', profilePictureUrl: 'https://i.pravatar.cc/150?u=alice', interests: ['Food Security and Hunger Relief', 'Other'], friendIds: [8, 3, 9], groupIds: [101, 201] },
+  { id: 1, firstName: 'Francis', lastName: 'Johnson', email: 'aj123@cornell.edu', password: 'password123', profilePictureUrl: 'https://i.pravatar.cc/150?u=Francis', interests: ['Food Security and Hunger Relief', 'Other'], friendIds: [8, 3, 9], groupIds: [101, 201] },
   { id: 2, firstName: 'Ben', lastName: 'Carter', email: 'bc456@cornell.edu', password: 'password123', profilePictureUrl: 'https://i.pravatar.cc/150?u=ben', interests: ['Environment & Sustainability', 'Education'], friendIds: [4, 9], groupIds: [102, 301] },
   { id: 3, firstName: 'Chloe', lastName: 'Davis', email: 'cd789@cornell.edu', password: 'password123', profilePictureUrl: 'https://i.pravatar.cc/150?u=chloe', interests: ['Food Security and Hunger Relief'], friendIds: [1], groupIds: [401] },
   { id: 4, firstName: 'David', lastName: 'Evans', email: 'de101@cornell.edu', password: 'password123', profilePictureUrl: 'https://i.pravatar.cc/150?u=david', interests: ['Environment & Sustainability'], friendIds: [2], groupIds: [102, 501] },
