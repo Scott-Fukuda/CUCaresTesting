@@ -71,7 +71,19 @@ const OpportunityCard: React.FC<OpportunityCardProps> = ({ opportunity, signedUp
       <img src={opportunity.imageUrl} alt={opportunity.title} className="w-full h-48 object-cover" />
       <div className="p-6 flex flex-col flex-grow">
         <div className="flex justify-between items-start mb-2">
-            <span className="text-sm font-semibold text-cornell-red uppercase tracking-wider">{opportunity.organization}</span>
+        <span 
+            className="text-sm font-semibold text-cornell-red uppercase tracking-wider hover:underline cursor-pointer"
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent the card click from triggering
+              const group = allGroups.find(g => g.name === opportunity.organization);
+              if (group) {
+                setPageState({ page: 'groupDetail', id: group.id });
+              }
+            }}
+          >
+            {opportunity.organization}
+          </span>
+
             <span className="bg-yellow-200 text-yellow-800 text-xs font-bold px-2.5 py-1 rounded-full">{opportunity.points} PTS</span>
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">{opportunity.title}</h3>
@@ -119,17 +131,7 @@ const OpportunityCard: React.FC<OpportunityCardProps> = ({ opportunity, signedUp
                 </div>
                 <div className="flex flex-wrap gap-2 p-3 bg-light-gray rounded-lg">
                     {topGroups.map(group => (
-                        <span
-                        key={group.id}
-                        className="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded-full hover:underline cursor-pointer"
-                        onClick={(e) => {
-                          e.stopPropagation(); // prevent card click
-                          setPageState({ page: 'groupDetail', id: group.id });
-                        }}
-                      >
-                        {group.name}
-                      </span>
-                      
+                        <span key={group.id} className="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded-full">{group.name}</span>
                     ))}
                 </div>
             </div>

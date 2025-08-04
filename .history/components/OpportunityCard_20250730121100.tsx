@@ -119,17 +119,7 @@ const OpportunityCard: React.FC<OpportunityCardProps> = ({ opportunity, signedUp
                 </div>
                 <div className="flex flex-wrap gap-2 p-3 bg-light-gray rounded-lg">
                     {topGroups.map(group => (
-                        <span
-                        key={group.id}
-                        className="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded-full hover:underline cursor-pointer"
-                        onClick={(e) => {
-                          e.stopPropagation(); // prevent card click
-                          setPageState({ page: 'groupDetail', id: group.id });
-                        }}
-                      >
-                        {group.name}
-                      </span>
-                      
+                        <span key={group.id} className="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded-full">{group.name}</span>
                     ))}
                 </div>
             </div>

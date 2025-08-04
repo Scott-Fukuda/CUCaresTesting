@@ -98,38 +98,30 @@ const SearchBar: React.FC<SearchBarProps> = ({
                 <li>
                   <h3 className="px-4 py-2 text-xs font-bold text-gray-500 uppercase bg-light-gray">Organizations</h3>
                   <ul>
-                  {filteredGroups.map(group => {
-                    const isMember = currentUser.groupIds.includes(group.id);
-                    return (
-                      <li key={group.id} className="flex items-center justify-between px-4 py-3 hover:bg-gray-50">
-                        <div>
-                          <p 
-                            className="font-semibold text-cornell-red hover:underline cursor-pointer"
+                    {filteredGroups.map(group => {
+                      const isMember = currentUser.groupIds.includes(group.id);
+                      return (
+                        <li key={group.id} className="flex items-center justify-between px-4 py-3 hover:bg-gray-50">
+                          <div>
+                            <p className="font-semibold text-gray-800">{group.name}</p>
+                            <p className="text-sm text-gray-500">{group.category}</p>
+                          </div>
+                          <button 
                             onClick={() => {
-                              setPageState({ page: 'groupDetail', id: group.id });
-                              handleResultClick();
+                                isMember ? leaveGroup(group.id) : joinGroup(group.id);
+                                handleResultClick();
                             }}
+                            className={`text-sm font-semibold py-1 px-3 rounded-full transition-colors ${
+                                isMember 
+                                ? 'bg-red-100 text-red-700 hover:bg-red-200'
+                                : 'bg-green-100 text-green-700 hover:bg-green-200'
+                            }`}
                           >
-                            {group.name}
-                          </p>
-                          <p className="text-sm text-gray-500">{group.category}</p>
-                        </div>
-                        <button 
-                          onClick={() => {
-                              isMember ? leaveGroup(group.id) : joinGroup(group.id);
-                              handleResultClick();
-                          }}
-                          className={`text-sm font-semibold py-1 px-3 rounded-full transition-colors ${
-                              isMember 
-                              ? 'bg-red-100 text-red-700 hover:bg-red-200'
-                              : 'bg-green-100 text-green-700 hover:bg-green-200'
-                          }`}
-                        >
-                          {isMember ? 'Leave' : 'Join'}
-                        </button>
-                      </li>
-                    );
-                  })}
+                            {isMember ? 'Leave' : 'Join'}
+                          </button>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </li>
               )}
